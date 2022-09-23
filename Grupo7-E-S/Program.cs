@@ -10,20 +10,32 @@ namespace Grupo7_E_S
     {
         static void Main(string[] args)
         {
-            //double[] tanques = new double[] { 5000, 3000, 1000 };
-            //double precio_premium = 200, precio_super = 300, precio_gasoil = 500, vendido_premium= 50, vendido_super=76, vendido_gasoil=22;
+            double[] tanques = new double[] { 5000, 3000, 1000 };
+            double precio_premium = 200, precio_super = 300, precio_gasoil = 500, vendido_premium= 50, vendido_super=76, vendido_gasoil=22;
 
             Ingresos(tanques, precio_premium, precio_super, precio_gasoil, vendido_premium, vendido_super, vendido_gasoil);
             
-            //Console.ReadKey();
+            Console.ReadKey();
         }
 
         static void Ingresos(double[] tanques, double precio_premium, double precio_super, double precio_gasoil, double vendido_premium, double vendido_super, double vendido_gasoil)
         {
+            /*
+            2022| Developed by Lucas Gonzalez and Cristian Lugo  |Todos los derechos reservados
+            */
+
+
+            ///////  Metodo para ver iformacion de combustibles  ////
+
+            //Llama el metodo 
+            /*Ingresos(tanques, precio_premium, precio_super, precio_gasoil, vendido_premium, vendido_super, vendido_gasoil);*/
+
+
+            //variables
             double tolalPremium, totalSuper, totalGasoil, totalRecaudado, totalTanques, totalLitrosV;
             int opcion;
-            bool salir = false;
 
+            //operaciones matematicas
             tolalPremium = vendido_premium * precio_premium;
             totalSuper = vendido_super * precio_super;
             totalGasoil = vendido_gasoil * precio_gasoil;
@@ -32,10 +44,7 @@ namespace Grupo7_E_S
             totalLitrosV = vendido_premium + vendido_super + vendido_gasoil;
 
 
-
-
-
-            while (!false)
+            while (true)
             {
                 Console.Clear();
                 /********* MARCO *********/
@@ -59,6 +68,8 @@ namespace Grupo7_E_S
 
                     }
                 }//fin marco
+
+                //menu
                 Console.ForegroundColor = ConsoleColor.Magenta;
                 Console.SetCursorPosition(40, 10);
                 Console.WriteLine("**********************************");
@@ -267,7 +278,6 @@ namespace Grupo7_E_S
                         case 5:
                             {
                                 Console.Clear();
-                                salir = true;
                                 return;
                             }
                         default:
@@ -293,10 +303,8 @@ namespace Grupo7_E_S
 
                     Console.ReadKey();
                 }
-                
-
-               
+                             
             }
-        }
+        }//fin metod ingresos
     }
 }
